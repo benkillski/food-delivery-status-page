@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background: url("https://assets.codepen.io/6060109/ZigZag.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger-img,
+#food-happy-img,
+#delivery-man-img {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 15px;
+    color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    transition: .3s ease all;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.content-container {
+    width: 350px;
+    height: 650px;
+    background-color: white;
+    margin: 70px 0;
+    box-shadow: 0px 40px 40px -20px #3C7B61;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content-container.center {
+    z-index: 9;
+    width: 370px;
+}
+
+.content-container.left {
+    margin-right: -20px;
+}
+
+.content-container.right {
+    margin-left: -20px;
+}
+
+.content-container.left,
+.content-container.right {
+    z-index: 1;
+    height: 600px;
+}
+
+#close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    positon: relative;
+}
+
+.content h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #2F463D;
+}
+
+.content p {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #828282;
+}
+
+#item-selection-bar {
+    margin: 30px 0 30px;
+    background-color: #F0FFF5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#item-selection-bar h3,
+#item-selection-bar p,
+#item-selection-bar a {
+    text-align: left;
+    font-family: Montserrat;
+}
+
+#item-selection-bar h3 {
+    color: #2F463D;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#item-selection-bar p {
+    color: #7A8F85;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#item-selection-bar a {
+    margin-right: 20px;
+    color: #467A66;
+}
+
+#ready-button {
+    position: absolute;
+    bottom: 80px;
+    transform: translateX(-50%);
+    background-color: #46A67E;
+}
+
+#bottom-slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 5px;
+    background-color: #E0E0E0;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.center .dot:nth-child(2) {
+    background-color: #67BD99;
+}
+
+.left,
+.right {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .left,
+    .right {
+        display: block;
+        align-self: center;
+    }
+
+    #next-button,
+    #track-button {
+        background-color: #BDBDBD;
+        position: absolute;
+        bottom: 120px;
+        transform: translateX(-50%);
+    }
+
+    .left .dot:nth-child(1) {
+        background-color: #67BD99;
+    }
+
+    .right .dot:nth-child(3) {
+        background-color: #67BD99;
+    }
+}
